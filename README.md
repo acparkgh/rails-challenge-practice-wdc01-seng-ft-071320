@@ -8,6 +8,20 @@ To this end, the domain you will be building should look like the following:
 
 Building -< Office >- Company -< Employee
 
+1. Building
+	has_many :offices
+	has_many :companies, through: :offices
+2. Office
+	belongs_to :building
+	belongs_to :company
+3. Company
+	has_many :offices
+	has_many :buildings, through: :offices
+	has_many :employees
+4. Employee
+	belongs_to :company
+
+
 ### Schema
 
 The schema should be as follows:
