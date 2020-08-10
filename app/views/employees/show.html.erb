@@ -1,0 +1,8 @@
+<h1>Employee Info</h1>
+    <ul>
+        <li><%=@employee.name%></li>
+        <li><%=@employee.company.name%></li>
+        <li><%=@employee.title%></li>
+    </ul>
+
+    <h1><%=link_to("Would You Like To Delete This Employee", employee_path(@employee.id), {method: :delete})%></h1>

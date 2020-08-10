@@ -1,0 +1,19 @@
+<h1>Company Info</h1>
+
+
+<%=@company.name%><br>
+
+<ul>
+    <%@company.buildings.each do |building|%>
+    <li><%=building.name%></li>
+    <%end%>
+</ul>
+
+<h1>Our Employees</h1>
+<ul>
+    <%@company.employees.each do |employee|%>
+    <li><%=link_to employee.name, employee_path(employee.id) %></li>
+    <%end%>
+</ul>
+
+<%=link_to "Add An Employee", new_employee_path%>

@@ -1,7 +1,7 @@
 <h1>All Companies</h1>
 
 <ul>
-    <% @companies.each do |company|%>
-    <li><%=link_to company.name%></li>
+    <% @companies.each do |each_company|%>
+    <li><%=link_to each_company.name, company_path(each_company.id) %></li>
     <%end%>
 </ul>
